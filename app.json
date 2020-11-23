@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/actionsheet/actionsheet"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,7 +18,7 @@
       "iconPath": "images/sprites.png",
       "selectedIconPath": "images/sprites.png"
     }, {
-      "pagePath": "pages/account/account",
+      "pagePath": "pages/actionsheet/actionsheet",
       "text": "我的"
     }]
   },
