@@ -18,7 +18,7 @@
       "iconPath": "images/sprites.png",
       "selectedIconPath": "images/sprites.png"
     }, {
-      "pagePath": "pages/actionsheet/actionsheet",
+      "pagePath": "pages/account/account",
       "text": "我的"
     }]
   },

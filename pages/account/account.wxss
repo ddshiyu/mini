@@ -4,3 +4,24 @@
  * Licensed under the MIT license
  */
  .page{background-color:var(--weui-BG-2)}
+ .user-header {
+   display: flex;
+   align-items: center;
+   background: #f9f9f9;
+ }
+ .btn {
+  background: #673bb7;
+  color: #fff;
+  width: 33.3%;
+ }
+
+ .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-name {
+  line-height: 128px;
+}
