@@ -3,11 +3,18 @@
  * Copyright 2020 Tencent, Inc.
  * Licensed under the MIT license
  */
- .page{background-color:var(--weui-BG-2)}
+ .page{background-color: #f9f9f9; height: 100vh;}
  .user-header {
+   text-align: center;
+   background-color: #FFF;
+   margin-bottom: 20rpx;
+   padding: 20rpx 0;
+ }
+ .userinfo-wrapper {
    display: flex;
+   flex-direction: column;
    align-items: center;
-   background: #f9f9f9;
+   justify-content: center;
  }
  .btn {
   background: #673bb7;
@@ -22,6 +29,21 @@
   border-radius: 50%;
 }
 
-.userinfo-name {
-  line-height: 128px;
+
+.user-cell {
+  padding: 10px 10px;
+  background: #fff;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.user-cell:last-child {
+  border: none;
+}
+.cell-first {
+  flex: 1;
+}
+.cell-last {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  transform: rotate(45deg);
 }

@@ -1,9 +1,19 @@
 <view class="page"> 
-	<view class="user-header">		
+	<view class="user-header">	
 		<button class="btn" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
-		<block wx:else>
+		<view class="userinfo-wrapper" wx:else>
 			<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
 			<text class="userinfo-name">{{userInfo.nickName}}</text>
-		</block>
+		</view>
+	</view>
+	<view class="user-options">
+		<view class="user-cell">
+			<text class="cell-first">累计打卡天数</text>
+			<text>123</text>
+		</view>
+		<view class="user-cell">
+			<navigator class="cell-first" url="/pages/cardDetail/cardDetail">打卡详情</navigator>
+			<text class="cell-last"></text>
+		</view>
 	</view>
 </view>

@@ -132,5 +132,16 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  fetchData() {
+    wx.request({
+      url: 'http://localhost:3000/json',
+      method: 'GET',
+      success: function (res) {
+        console.log(res);
+        
+      }
+    })
+    
   }
 })
