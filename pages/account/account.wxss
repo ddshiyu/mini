@@ -30,20 +30,3 @@
 }
 
 
-.user-cell {
-  padding: 10px 10px;
-  background: #fff;
-  display: flex;
-  border-bottom: 1px solid #ccc;
-}
-.user-cell:last-child {
-  border: none;
-}
-.cell-first {
-  flex: 1;
-}
-.cell-last {
-  border-top: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  transform: rotate(45deg);
-}

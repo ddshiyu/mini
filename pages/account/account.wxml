@@ -1,5 +1,5 @@
-<view class="page"> 
-	<view class="user-header">	
+<view class="page">
+	<view class="user-header">
 		<button class="btn" wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
 		<view class="userinfo-wrapper" wx:else>
 			<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
@@ -7,13 +7,25 @@
 		</view>
 	</view>
 	<view class="user-options">
-		<view class="user-cell">
-			<text class="cell-first">累计打卡天数</text>
-			<text>123</text>
-		</view>
-		<view class="user-cell">
-			<navigator class="cell-first" url="/pages/cardDetail/cardDetail">打卡详情</navigator>
-			<text class="cell-last"></text>
+		<view class="weui-cells">
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd">
+					<text style="vertical-align: middle;">累计打卡天数</text>
+				</view>
+				<text>{{clockInData.length}} 天</text>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd" bindtap='handleToDetail'>
+					<text style="vertical-align: middle;">打卡详情</text>
+				</view>
+				<view class="weui-cell__ft"></view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd" bindtap='handleToDetail'>
+					<text style="vertical-align: middle;">关于</text>
+				</view>
+				<view class="weui-cell__ft"></view>
+			</view>
 		</view>
 	</view>
 </view>

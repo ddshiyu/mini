@@ -1,3 +1,35 @@
 <view class="container">
   <button class="btn" bindtap='fetchData'>打卡</button>
+	<view class="fadeIn {{hideToast ? 'fadeOut' : ''}}" wx:if="{{toast}}">
+		<view class="weui-mask_transparent"></view>
+		<view class="weui-toast">
+			<i class="weui-icon-success-no-circle weui-icon_toast"></i>
+			<view class="weui-toast__content">已完成</view>
+		</view>
+	</view>
+	<view class="fadeIn {{hideWarnToast ? 'fadeOut' : ''}}" wx:if="{{warnToast}}">
+		<view class="weui-mask_transparent"></view>
+		<view class="weui-toast">
+			<i class="weui-icon-warn weui-icon_toast"></i>
+			<view class="weui-toast__content">请求失败</view>
+		</view>
+	</view>
+	<view class="fadeIn {{hideLoading ? 'fadeOut' : ''}}" wx:if="{{loading}}">
+		<view class="weui-mask_transparent"></view>
+		<view class="weui-toast">
+			<view class="weui-primary-loading weui-primary-loading_transparent weui-icon_toast">
+        <view class="weui-primary-loading__dot"></view>
+      </view>
+			<view class="weui-toast__content">加载中</view>
+		</view>
+	</view>
+  <view class="fadeIn {{hideLoading ? 'fadeOut' : ''}}" wx:if="{{loading}}">
+		<view class="weui-mask_transparent"></view>
+		<view class="weui-toast">
+			<view class="weui-primary-loading weui-primary-loading_transparent weui-icon_toast">
+        <view class="weui-primary-loading__dot"></view>
+      </view>
+			<view class="weui-toast__content">加载中</view>
+		</view>
+	</view>
 </view>

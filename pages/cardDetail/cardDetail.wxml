@@ -1,2 +1,7 @@
 <!--pages/cardDetail/cardDetail.wxml-->
-<text>pages/cardDetail/cardDetail.wxml</text>
+<view class="user-options">
+		<view class="user-cell" wx:for="{{detail}}" wx:key='id'>
+			<text class="cell-first">{{item.name}}</text>
+			<text>{{item.clocktime}}</text>
+		</view>
+	</view>

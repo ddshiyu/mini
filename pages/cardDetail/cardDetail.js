@@ -1,18 +1,24 @@
 // pages/cardDetail/cardDetail.js
+import { formatTime } from '../../utils/util'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    detail: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function (option) {
+    console.log(option);
+    const mydata = JSON.parse(option.data)
+    mydata.map(item => item.clocktime = formatTime(item.clocktime + ''))
+    this.setData({
+      detail: mydata
+    })
   },
 
   /**

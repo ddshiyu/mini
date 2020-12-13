@@ -21,6 +21,9 @@
     }, {
       "pagePath": "pages/account/account",
       "text": "我的"
+    }, {
+      "pagePath": "pages/actionsheet/actionsheet",
+      "text": "第三方"
     }]
   },
   "style": "v2",

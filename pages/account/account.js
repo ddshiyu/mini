@@ -7,14 +7,24 @@ Page({
    */
   data: {
     userInfo: {},
-    hasUserInfo: false
+    hasUserInfo: false,
+    clockInData: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.getStorage({
+      key: 'userInfo',
+      success:  (res) => {
+        this.setData({
+          userInfo: res.data,
+          hasUserInfo: true
+        })
+        this.getUserClockIn()
+      }
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -22,6 +32,31 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+    wx.setStorage({
+      data: e.detail.userInfo,
+      key: 'userInfo',
+    })
+    this.getUserClockIn()
+  },
+  getUserClockIn: function () {
+    wx.request({
+      url: 'http://localhost:3000/UserClockIn',
+      method: 'POST',
+      data: {
+        username: this.data.userInfo.nickName
+      },
+      success:  (res) => {
+        console.log(res);
+        this.setData({
+          clockInData: res.data.data
+        })
+      }
+    })
+  },
+  handleToDetail: function () {
+    wx.navigateTo({
+      url: '/pages/cardDetail/cardDetail?data=' + JSON.stringify(this.data.clockInData)
     })
   },
   /**
@@ -56,7 +91,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    this.getUserClockIn()
   },
 
   /**
