@@ -23,13 +23,4 @@
 			<view class="weui-toast__content">加载中</view>
 		</view>
 	</view>
-  <view class="fadeIn {{hideLoading ? 'fadeOut' : ''}}" wx:if="{{loading}}">
-		<view class="weui-mask_transparent"></view>
-		<view class="weui-toast">
-			<view class="weui-primary-loading weui-primary-loading_transparent weui-icon_toast">
-        <view class="weui-primary-loading__dot"></view>
-      </view>
-			<view class="weui-toast__content">加载中</view>
-		</view>
-	</view>
 </view>
