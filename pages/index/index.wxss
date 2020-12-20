@@ -10,16 +10,13 @@
 .btn {
   width: 130rpx;
   height: 130rpx;
-  border-radius:  130rpx;
+  border-radius:  50%;
   border: 1px solid #ccc;
   outline: none;
+  text-align: center;
   font-size: 28rpx;
   background: #673bb7;
   line-height: 130rpx;
   color: #fff;
-}
-.btn::after {
-  border-radius:  130rpx;
-  border: 0; 
 }
 

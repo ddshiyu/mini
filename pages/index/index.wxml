@@ -1,5 +1,5 @@
 <view class="container">
-  <button class="btn" bindtap='fetchData'>打卡</button>
+  <div class="btn" bindtap='fetchData'>打卡</div>
 	<view class="fadeIn {{hideToast ? 'fadeOut' : ''}}" wx:if="{{toast}}">
 		<view class="weui-mask_transparent"></view>
 		<view class="weui-toast">
