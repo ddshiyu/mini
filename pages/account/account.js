@@ -27,17 +27,31 @@ Page({
     })
   },
   getUserInfo: function(e) {
-    console.log(e)
-    // app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-    wx.setStorage({
-      data: e.detail.userInfo,  
-      key: 'userInfo',
-    })
-    this.getUserClockIn()
+    wx.login({
+      success (res) {
+        if (res.code) {
+          wx.request({
+            url: "http://localhost:9999/app/login",
+            data: {
+              code: res.code
+            }
+          })
+        } else {
+          console.log('登陆失败' + res.errMsg);
+        }
+      }
+     })
+    // console.log(e)
+    // // app.globalData.userInfo = e.detail.userInfo
+    // this.setData({
+    //   userInfo: e.detail.userInfo,
+    //   hasUserInfo: true
+    // })
+    // wx.setStorage({
+    //   data: e.detail.userInfo,  
+    //   key: 'userInfo',
+    // })
+    // this.getUserClockIn()
   },
   getUserClockIn: function () {
     wx.request({
