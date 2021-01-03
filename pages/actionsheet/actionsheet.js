@@ -1,22 +1,11 @@
 Page({
     data: {
-        showIOSDialog: false,
-        showAndroidDialog: false,
+        items: [
+            { name: '1', value: 'cell standard' },
+            { name: '2', value: 'cell standard', checked: 'true' },
+        ]
     },
-    close: function() {
-        this.setData({
-            showIOSDialog: false,
-            showAndroidDialog: false
-        });
-    },
-    openIOS: function () {
-        this.setData({
-            showIOSDialog: true
-        });
-    },
-    openAndroid: function () {
-        this.setData({
-            showAndroidDialog: true
-        });
+    radioChange: function (e) {
+        console.log('radio发生change事件，携带value值为：', e.detail.value)
     }
 });

@@ -82,7 +82,7 @@ Page({
           loading: true
         });
         wx.request({
-          url: 'http://localhost:3000/json',
+          url: 'https://jdqiong.cn/app/json',
           method: 'POST',
           data: {
             username: res.data.nickName

@@ -5,7 +5,54 @@
     "pages/account/account",
     "pages/actionsheet/actionsheet",
     "pages/cardDetail/cardDetail",
-    "pages/about/about"
+    "pages/about/about",
+    "example/index",
+
+    "example/button/button",
+    "example/input/input",
+    "example/form/form",
+    "example/form/form_page",
+    "example/form/form_input_status",
+    "example/form/form_vcode",
+    "example/form/form_checkbox",
+    "example/form/form_radio",
+    "example/form/form_switch",
+    "example/form/form_select",
+    "example/form/form_textarea",
+    "example/list/list",
+    "example/slideview/slideview",
+    "example/slider/slider",
+    "example/uploader/uploader",
+
+    "example/article/article",
+    "example/badge/badge",
+    "example/flex/flex",
+    "example/footer/footer",
+    "example/gallery/gallery",
+    "example/grid/grid",
+    "example/icons/icons",
+    "example/loading/loading",
+    "example/loadmore/loadmore",
+    "example/panel/panel",
+    "example/preview/preview",
+    "example/progress/progress",
+
+    "example/actionsheet/actionsheet",
+    "example/half-screen-dialog/half-screen-dialog",
+    "example/dialog/dialog",
+    "example/msg/msg",
+    "example/msg/msg_text",
+    "example/msg/msg_text_primary",
+    "example/msg/msg_success",
+    "example/msg/msg_warn",
+    "example/picker/picker",
+    "example/toast/toast",
+    "example/top-tips/top-tips",
+
+    "example/navigation-bar/navigation-bar",
+    "example/tabbar/tabbar",
+
+    "example/searchbar/searchbar"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,14 +64,13 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
-      "iconPath": "images/sprites.png",
-      "selectedIconPath": "images/sprites.png"
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home.png"
     }, {
       "pagePath": "pages/account/account",
-      "text": "我的"
-    }, {
-      "pagePath": "pages/actionsheet/actionsheet",
-      "text": "第三方"
+      "text": "我的",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me.png"
     }]
   },
   "style": "v2",

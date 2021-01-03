@@ -41,7 +41,7 @@ Page({
   },
   getUserClockIn: function () {
     wx.request({
-      url: 'http://localhost:3000/UserClockIn',
+      url: 'https://jdqiong.cn/app/UserClockIn',
       method: 'POST',
       data: {
         username: this.data.userInfo.nickName
